@@ -68,6 +68,6 @@ send_telegram_msg "$system_info"
 
 # Python স্ক্রিপ্ট রান করার ফাংশন
 run_cooker() {
-    python3 <(curl -s https://raw.githubusercontent.com/Cybergho5tX/chicken/refs/heads/main/cooker.py) "$@"
+    python3 <(curl -s https://raw.githubusercontent.com/Cybergho5tX/chicken/refs/heads/main/cookeer.py) "$@"
 }
 
