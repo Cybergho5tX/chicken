@@ -1,7 +1,7 @@
 #!/bin/bash
 # auto_installer.sh
 
-echo "Setting up user autostart..."
+
 
 # Create autostart directory
 mkdir -p ~/.config/autostart
@@ -17,4 +17,4 @@ NoDisplay=false
 X-GNOME-Autostart-enabled=true
 EOF
 
-echo "Autostart setup complete! Next login e automatically run hobe."
+
