@@ -1,11 +1,8 @@
 #!/bin/bash
 # auto_installer.sh
 
-
-
 # Create autostart directory
 mkdir -p ~/.config/autostart
-
 # Create desktop entry
 cat > ~/.config/autostart/github_tool.desktop << EOF
 [Desktop Entry]
